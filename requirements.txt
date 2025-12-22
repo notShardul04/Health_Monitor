@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlalchemy
+python-jose[cryptography]
+passlib[argon2]
+python-multipart
+dash
+pandas
+plotly
+requests
+psycopg2-binary
