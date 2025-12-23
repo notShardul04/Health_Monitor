@@ -174,6 +174,7 @@ def manage_auth_and_view(login_clicks, logout_clicks, username, password, curren
     ctx = callback_context
     triggered_id = ctx.triggered[0]['prop_id'].split('.')[0] if ctx.triggered else None
 
+
     # Constants for styles
     SHOW_LOGIN = {'display': 'block'}
     HIDE_LOGIN = {'display': 'none'}
@@ -304,7 +305,7 @@ def update_dashboard_actions(n, token, sub_met, sub_goal, table_prev, date_val, 
             value = g_step['current_value'],
             domain = {'x': [0, 1], 'y': [0, 1]},
             title = {'text': "Steps Goal", 'font': {'color': 'white'}},
-            delta = {'reference': g_step['target_value'], 'primary': {'color': 'white'}},
+            delta = {'reference': g_step['target_value'], 'increasing': {'color': 'white'}, 'decreasing': {'color': 'white'}},
             gauge = {
                 'axis': {'range': [None, max(g_step['target_value'], g_step['current_value']*1.1)]},
                 'bar': {'color': "#3b82f6"},
